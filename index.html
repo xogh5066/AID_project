@@ -1,9 +1,17 @@
 <!doctype html>
-<html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>AID Data Lab · 학생 데이터 실무 실습</title><style>
+<html lang="ko">
+<head>
+ <meta charset="utf-8">
+ <meta name="viewport" content="width=device-width,initial-scale=1">
+ <title>AID Data Lab · 학생 데이터 실무 실습</title>
+ <style>
 :root{--ink:#172b36;--muted:#536774;--bg:#f3f6f8;--line:#dce5e9;--teal:#006d66;--mint:#e4f4ee;--nav:#102d35}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:system-ui,'Apple SD Gothic Neo','Nanum Gothic',sans-serif;font-size:15px}button,input,select,textarea{font:inherit}button{cursor:pointer;border:1px solid var(--line);border-radius:9px;padding:10px 15px;background:white;color:var(--ink);font-weight:650}button:hover{border-color:var(--teal)}button.primary{background:var(--teal);color:white;border-color:var(--teal)}button:disabled{opacity:.45;cursor:not-allowed}header{background:var(--nav);color:white;padding:18px 5%;display:flex;justify-content:space-between;align-items:center;gap:15px}header strong{font-size:21px;letter-spacing:-.7px}header small{color:#c2d9dc}main{max-width:1230px;margin:auto;padding:30px 24px 60px}.intro{display:flex;justify-content:space-between;gap:25px;align-items:center;margin-bottom:25px}.eyebrow{color:var(--teal);font-weight:800;font-size:12px;letter-spacing:1.8px}h1{font-size:34px;letter-spacing:-1.5px;margin:10px 0}h2{font-size:21px;margin:0 0 13px;letter-spacing:-.7px}h3{font-size:16px;margin:0 0 12px}p{line-height:1.7;color:var(--muted);margin:9px 0}.badge{display:inline-block;padding:6px 10px;border-radius:6px;background:var(--mint);color:#00594e;font-size:12px;font-weight:700}.tabs{display:flex;gap:7px;border-bottom:1px solid var(--line);padding-bottom:13px;margin-bottom:23px;flex-wrap:wrap}.tabs button{background:transparent;border-color:transparent}.tabs button.active{background:var(--nav);color:white}.panel{display:none}.panel.active{display:block}.grid{display:grid;grid-template-columns:1.3fr 1fr;gap:20px}.card{background:white;border:1px solid var(--line);border-radius:14px;padding:24px;margin-bottom:20px}.kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:20px}.kpi{padding:18px;background:white;border:1px solid var(--line);border-radius:12px}.kpi b{font-size:26px;display:block;margin-bottom:5px}.kpi span,.hint{color:var(--muted);font-size:13px}.drop{background:#f6faf9;border:1px dashed #7caaa3;border-radius:11px;padding:25px;margin:17px 0}.row{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin:14px 0}label{display:block;color:var(--muted);font-size:13px;margin:12px 0 6px}input,select,textarea{border:1px solid #bdcdd3;background:white;border-radius:7px;padding:10px;color:var(--ink);max-width:100%}select{min-width:140px}textarea{width:100%;min-height:130px;resize:vertical}.tablewrap{overflow:auto;max-height:350px}table{border-collapse:collapse;width:100%;font-size:13px;text-align:left;white-space:nowrap}th,td{padding:11px 13px;border-bottom:1px solid var(--line)}th{background:#f3f7f8;position:sticky;top:0}td:first-child{font-weight:600}.notice{background:#edf5f4;border-left:3px solid var(--teal);padding:14px 17px;border-radius:4px;line-height:1.7;font-size:14px}.warn{background:#fff4de;border-left-color:#a96300}.result{font-size:28px;font-weight:800;color:var(--teal);margin:14px 0}.empty{padding:20px;color:var(--muted)}.step{display:flex;gap:13px;margin:20px 0}.step b{background:var(--mint);color:var(--teal);border-radius:8px;padding:9px;height:38px}.step p{margin:0}.step strong{display:block;margin-bottom:3px}.foot{color:var(--muted);font-size:12px;line-height:1.8;margin-top:20px}.score{font-size:42px;font-weight:800;color:var(--teal)}.tag{font-size:11px;background:#edf1f4;border-radius:4px;padding:3px 6px}footer{border-top:1px solid var(--line);padding-top:19px;color:var(--muted);font-size:12px}#status{margin:12px 0;color:var(--teal);line-height:1.7}ol{line-height:1.9;padding-left:20px}@media(max-width:760px){.grid{grid-template-columns:1fr}.intro{display:block}h1{font-size:27px}.kpis{grid-template-columns:repeat(2,1fr)}main{padding:22px 16px}header small{display:none}.card{padding:18px}}
 
 .tabs{flex-wrap:wrap;gap:8px}.tabs button{white-space:nowrap}#advanced pre{overflow-wrap:anywhere}#advanced input,#advanced select{max-width:100%}
-</style></head><body><header><strong>◈ AID <span style="font-weight:400">Data Lab</span></strong><small>STUDENT INNOVATION / 데이터로 배우는 실무</small><span class="badge">부천대학교 </span></header><main>
+</style>
+</head>
+<body>
+ <header><strong>◈ AID <span style="font-weight:400">Data Lab</span></strong><small>STUDENT INNOVATION / 데이터로 배우는 실무</small><span class="badge">부천대학교</span></header><main>
 <div class="intro"><div><div class="eyebrow">FROM DATA TO DECISION</div><h1>데이터를 읽고, 근거로 판단하다.</h1><p>데이터 분석부터 예측과 통계적 추론까지. 직접 작성하고, 피드백받는 실습 프로그램.</p></div><button class="primary" id="demoBtn">가상 데이터로 바로 시작 →</button></div>
 <div class="tabs" role="tablist" aria-label="실습 단계"><button class="active" data-tab="data" id="tab-data" role="tab" aria-controls="data" aria-selected="true" tabindex="0">01 데이터 준비</button><button data-tab="analyze" id="tab-analyze" role="tab" aria-controls="analyze" aria-selected="false" tabindex="-1">02 탐색·분석</button><button data-tab="infer" id="tab-infer" role="tab" aria-controls="infer" aria-selected="false" tabindex="-1">03 예측·추론</button><button data-tab="practice" id="tab-practice" role="tab" aria-controls="practice" aria-selected="false" tabindex="-1">04 실무 미션</button><button data-tab="advanced" id="tab-advanced" role="tab" aria-controls="advanced" aria-selected="false" tabindex="-1">05 확장 실습</button><button data-tab="review" id="tab-review" role="tab" aria-controls="review" aria-selected="false" tabindex="-1">06 사람 검토(HITL)</button></div>
 <div class="kpis"><div class="kpi"><b id="nrow">—</b><span>데이터 행</span></div><div class="kpi"><b id="ncol">—</b><span>변수 수</span></div><div class="kpi"><b id="nnum">—</b><span>수치형 변수</span></div><div class="kpi"><b id="nmiss">—</b><span>결측 셀 수</span></div></div>
@@ -49,7 +57,8 @@ document.addEventListener('change',markStale);
 document.addEventListener('click',()=>setTimeout(markStale,0));
 $('feedbackBtn').onclick=async()=>{
  const b=$('feedbackBtn'); let timer;
- try{
+ 
+ try{  
  if(location.protocol==='file:')throw Error('HTML을 직접 열지 말고 실행 안내에 따라 배포된 HTTPS 주소 에서 접속하세요.');
  if(!$('aiConsent').checked)throw Error('전송할 내용을 확인하고 외부 AI 전송에 동의하세요.');
  const payload=context();
@@ -62,9 +71,12 @@ $('feedbackBtn').onclick=async()=>{
  if(typeof data.feedback!=='string')throw Error('AI 응답을 읽을 수 없습니다.');
  if(snapshot!==JSON.stringify(context()))throw Error('검토 도중 데이터 또는 답안이 바뀌었습니다. 현재 답안으로 다시 요청하세요.');
  aiRecord={snapshot,text:data.feedback};$('feedback').style.whiteSpace='pre-wrap';$('feedback').textContent=data.feedback;
- }catch(e){$('feedback').textContent='AI 피드백 실패: '+(e.name==='AbortError'?'응답 시간이 초과되었습니다. 잠시 후 다시 시도하세요.':e.message)}
+ }
+ 
+ catch(e){$('feedback').textContent='AI 피드백 실패: '+(e.name==='AbortError'?'응답 시간이 초과되었습니다. 잠시 후 다시 시도하세요.':e.message)}
  finally{clearTimeout(timer);b.disabled=false;b.textContent='다중 모델 검증·피드백'}
 };
+ 
 if(location.protocol==='file:'){$('aiStatus').textContent='AI 연결 불가: 실행 안내에 따라 로컬 주소에서 접속하세요.'}else{fetch('/api/status').then(r=>r.json()).then(d=>{$('aiStatus').textContent=d.configured?'API 설정 입력 확인됨 · 실제 연결은 피드백 요청 시 검증됩니다.':'다중 모델 미설정 · 서버 환경변수를 확인하세요.'}).catch(()=>{$('aiStatus').textContent='로컬 서버에 연결할 수 없습니다.'})}
 $('saveReview').onclick=()=>download('AID_HITL_검토기록.txt',[new Date().toISOString(),JSON.stringify(context(),null,2),currentFeedback(),'사람 검토 기록:',$('humanReview').value].join('\n'),'text/plain;charset=utf-8');
 $('exportBtn').onclick=safe(()=>{if(!rows.length)throw Error('데이터를 먼저 불러오세요.');const text=['AID Data Lab · 실습 결과','저장 시각: '+new Date().toLocaleString('ko-KR'),'자료: '+source,'데이터: '+rows.length+'행 / '+headers.length+'열','※ 원본 데이터는 이 결과 파일에 포함하지 않습니다.','',...Object.values(log),'','1. 분석 근거',$('q1').value,'2. 인과관계 답변',$('q2').value,'3. 실행 제안 및 한계',$('q3').value,'',currentFeedback(),'','시연 프로토타입. 가상 자료의 결과는 실제 교육 효과의 근거가 아닙니다.'].join('\n');download('AID_실습결과.txt',text,'text/plain;charset=utf-8')});
@@ -95,4 +107,6 @@ document.querySelector('[role="tablist"]').addEventListener('keydown',e=>{
  if(e.key==='ArrowRight')n=(i+1)%tabs.length;else if(e.key==='ArrowLeft')n=(i+tabs.length-1)%tabs.length;else if(e.key==='Home')n=0;else if(e.key==='End')n=tabs.length-1;else return;
  e.preventDefault();tabs[n].click();tabs[n].focus();
 });
-</script></body></html>
+</script>
+</body>
+</html>
