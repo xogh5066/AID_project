@@ -1,0 +1,4 @@
+[
+  {"model":"gpt-6-luna","url":"https://api.baze.co/v1/gateway/chat/completions/","key_env":"MODEL_A_KEY","weight":1},
+  {"model":"claude-haiku-5-5","url":"https://api.baze.co/v1/gateway/chat/completions/","key_env":"MODEL_B_KEY","weight":1}
+]
