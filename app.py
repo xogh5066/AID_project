@@ -8,7 +8,7 @@ app=Flask(__name__)
 app.secret_key=os.environ.get('SESSION_SECRET') or secrets.token_hex(32)
 app.config.update(MAX_CONTENT_LENGTH=120000,SESSION_COOKIE_SECURE=True,SESSION_COOKIE_HTTPONLY=True,SESSION_COOKIE_SAMESITE='Lax')
 lock=threading.Lock(); counts={}; busy=threading.BoundedSemaphore(3)
-LOGIN='''<!doctype html><html lang="ko"><meta charset="utf-8"><meta name="viewport" content="width=device-width"><title>AID 실습 입장</title><body style="font-family:system-ui;background:#f3f6f8;padding:10%;color:#172b36"><h1>AID Data Lab</h1><p>심사·수업용 입장 코드를 입력하세요. 개인정보는 입력하지 마세요.</p><form method="post" action="/login"><input type="password" name="code" required maxlength="200" placeholder="입장 코드" aria-label="입장 코드"><button>실습 시작</button></form></body></html>'''
+LOGIN='''<!doctype html><html lang="ko"><meta charset="utf-8"><meta name="viewport" content="width=device-width"><title>BUCHEON AID</title><body style="font-family:system-ui;background:#f3f6f8;padding:10%;color:#172b36"><h1>AID Data Lab</h1><p>심사·수업용 입장 코드를 입력하세요. 개인정보는 입력하지 마세요.</p><form method="post" action="/login"><input type="password" name="code" required maxlength="200" placeholder="입장 코드" aria-label="입장 코드"><button>실습 시작</button></form></body></html>'''
 def limited(key,limit):
     day=int(time.time()//86400)
     with lock:
