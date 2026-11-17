@@ -3,7 +3,7 @@ name: Keep Render App Alive
 on:
   schedule:
     # 매 10분마다 실행 (Render는 보통 15분 미사용 시 슬립됨)
-    - cron: '*/10 * * * *'
+    - cron: '*/13 * * * *'
   workflow_dispatch: # 수동으로도 실행할 수 있게 함
 
 jobs:
